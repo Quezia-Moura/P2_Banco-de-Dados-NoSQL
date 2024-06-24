@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Eventos</title>   
+    <link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Eventos</h1>
+        <a class="btn" href="{% url 'criar_evento' %}">Criar novo evento</a>
+        <div class="list-container">
+            <ul class="event-list">
+                {% for evento in eventos %}
+                    <li class="list-item">
+                        {{ evento.nome }} - {{ evento.data }} - {{ evento.local }}
+                        <div class="action-buttons">
+                            <a class="btn" href="{% url 'atualizar_evento' evento.id %}">Editar</a>
+                            <a class="btn" href="{% url 'deletar_evento' evento.id %}">Deletar</a>
+                        </div>
+                    </li>
+                {% empty %}
+                    <li>Nenhum evento encontrado.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
