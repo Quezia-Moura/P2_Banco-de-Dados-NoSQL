@@ -15,3 +15,6 @@ Aluna: Quézia Trindade Moura
 
 * <h3>VÍDEO NO YOUTUBE</h3>
     https://youtu.be/p9TPzkLNtb4
+
+* <h3>REQUISITOS DA APLICAÇÃO</h3>
+![Requisitos da Aplicação](https://github.com/Quezia-Moura/P2_Banco-de-Dados-NoSQL/assets/125207561/96f2f9ff-1064-4d33-b935-83aff2036a6b)
